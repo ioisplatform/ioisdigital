@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOIS PLATFORM | Indian Online Income Supporting System</title>
+    <meta name="theme-color" content="#030712">
+    <meta name="description" content="IOIS Platform - Indian Online Income Supporting System. Complete digital ecosystem and income platform.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at top, rgba(245,158,11,.10), transparent 35%), #030712;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tiranga-text {
+            background: linear-gradient(90deg, #f97316 0%, #ffffff 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass {
+            background: rgba(15,23,42,.85);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(245,158,11,.25);
+            box-shadow: 0 25px 70px rgba(0,0,0,.55), inset 0 0 40px rgba(15,23,42,.45);
+        }
+        .input-box {
+            background: #080d1e;
+            border: 1px solid rgba(100,116,139,.65);
+        }
+        .input-box:focus {
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 2px rgba(245,158,11,.25);
+            outline: none;
+        }
+        .page-section { display: none; }
+        .page-section.active { display: block; }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto space-y-6">
+        
+        <!-- Top Navigation / Header with Logo -->
+        <div class="glass p-4 rounded-2xl flex justify-between items-center">
+            <div class="flex items-center gap-3 cursor-pointer" onclick="showPage('home')">
+                <img src="assets/logo.png" alt="IOIS Logo" class="h-10 w-10 object-contain" onerror="this.style.display='none'">
+                <div>
+                    <h1 class="text-lg font-bold tiranga-text">IOIS PLATFORM</h1>
+                    <p class="text-[10px] text-gray-400">Indian Online Income Supporting System</p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="showPage('home')" class="px-3 py-1.5 bg-gray-800 hover:bg-gray-700 rounded-lg text-xs font-bold transition"><i class="fa-solid fa-house"></i> Home</button>
+                <button onclick="showPage('login')" class="px-3 py-1.5 bg-amber-500 hover:bg-amber-600 text-gray-950 rounded-lg text-xs font-bold transition">Login</button>
+                <button onclick="showPage('register')" class="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 rounded-lg text-xs font-bold transition">Register</button>
+            </div>
+        </div>
+
+        <!-- ================= 1. HOME & INFORMATION SECTION ================= -->
+        <div id="section-home" class="page-section active space-y-6">
+            <!-- Hero Card -->
+            <div class="glass p-6 md:p-8 rounded-2xl text-center space-y-4">
+                <span class="text-xs bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full border border-amber-500/30">🇮🇳 Digital Empowerment & Income System</span>
+                <h2 class="text-3xl md:text-4xl font-bold tiranga-text">Indian Online Income Supporting System</h2>
+                <p class="text-gray-300 text-sm max-w-xl mx-auto leading-relaxed">
+                    IOIS Platform एक आधुनिक डिजिटल इकोसिस्टम है जो ग्रामीण और शहरी युवाओं को ऑनलाइन टूल्स, डिजिटल रिसोर्सेज, सीवी मेकिंग, और रेफरल इनकम के जरिए सशक्त बनाता है। कम लागत में अपने सपनों को सच करें!
+                </p>
+                <div class="pt-2 flex justify-center gap-4 flex-wrap">
+                    <button onclick="showPage('register')" class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold rounded-xl text-sm shadow-lg transition">🚀 Join IOIS Now (₹10)</button>
+                    <button onclick="showPage('login')" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 font-bold rounded-xl text-sm border border-gray-700 transition">🔐 Member Login</button>
+                </div>
+            </div>
+
+            <!-- About & Features Information Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass p-6 rounded-2xl space-y-3">
+                    <div class="text-amber-400 text-xl"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 class="font-bold text-base text-amber-400">IOIS का मुख्य उद्देश्य</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed">
+                        हमारा लक्ष्य हर युवा को आसान डिजिटल प्लेटफॉर्म और ऑनलाइन कमाई के अवसर प्रदान करना है। बिना किसी भारी निवेश के आप अपनी डिजिटल आईडी और नेटवर्क तैयार कर सकते हैं।
+                    </p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl space-y-3">
+                    <div class="text-teal-400 text-xl"><i class="fa-solid fa-toolbox"></i></div>
+                    <h3 class="font-bold text-base text-teal-400">उपलब्ध डिजिटल फीचर्स</h3>
+                    <ul class="text-gray-300 text-xs space-y-1.5 list-disc list-inside">
+                        <li>3D तिरंगा ग्रेडिएंट टेक्स्ट और कस्टम ब्रांडिंग</li>
+                        <li>सुरक्षित यूजर प्रोफाइल और पेमेंट विवरण अपडेट</li>
+                        <li>व्हाट्सएप और डिजिटल टूल्स इंटीग्रेशन</li>
+                        <li>फ्री और फास्ट सिंगल-पेज डैशबोर्ड एक्सेस</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= 2. LOGIN SECTION ================= -->
+        <div id="section-login" class="page-section glass p-6 md:p-8 rounded-2xl max-w-md mx-auto">
+            <h2 class="text-2xl font-bold text-center tiranga-text mb-4">Member Login</h2>
+            <form id="single-login-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-gray-300 mb-1">ईमेल आईडी (Email)</label>
+                    <input type="email" id="login-email" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="name@example.com">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-300 mb-1">पासवर्ड (Password)</label>
+                    <input type="password" id="login-password" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold rounded-lg text-sm transition">सिक्योर लॉगिन करें</button>
+            </form>
+            <p class="text-center text-xs text-gray-400 mt-4">खाता नहीं है? <span onclick="showPage('register')" class="text-amber-400 cursor-pointer font-bold hover:underline">यहाँ रजिस्टर करें</span></p>
+        </div>
+
+        <!-- ================= 3. REGISTER SECTION ================= -->
+        <div id="section-register" class="page-section glass p-6 md:p-8 rounded-2xl max-w-lg mx-auto">
+            <h2 class="text-2xl font-bold text-center tiranga-text mb-2">Member Registration</h2>
+            <p class="text-center text-xs text-gray-400 mb-4">₹10 से शुरुआत करें और डिजिटल आईडी कार्ड सेटअप करें</p>
+            <form id="single-register-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-gray-300 mb-1">पूरा नाम (Full Name) *</label>
+                    <input type="text" id="reg-name" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="अपना नाम दर्ज करें">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">ईमेल आईडी *</label>
+                        <input type="email" id="reg-email" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="name@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">व्हाट्सएप नंबर *</label>
+                        <input type="tel" id="reg-phone" maxlength="10" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="9876543210">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">पासवर्ड (कम से कम 6 अंक) *</label>
+                        <input type="password" id="reg-password" minlength="6" required class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="••••••••">
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-300 mb-1">मेम्बरशिप प्लान *</label>
+                        <select id="reg-plan" class="input-box w-full px-4 py-2 rounded-lg text-white text-sm">
+                            <option value="10">₹10 - Standard Digital ID Plan</option>
+                            <option value="49">₹49 - Silver Creator Plan</option>
+                            <option value="99">₹99 - Gold Growth Plan</option>
+                            <option value="999">₹999 - Master Elite Plan</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-300 mb-1">पेमेंट यूपीआई आईडी / बैंक विवरण</label>
+                    <input type="text" id="reg-upi" class="input-box w-full px-4 py-2 rounded-lg text-white text-sm" placeholder="UPI ID या बैंक डिटेल्स">
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold rounded-lg text-sm transition">🚀 रजिस्टर करें और इनकम शुरू करें</button>
+            </form>
+            <p class="text-center text-xs text-gray-400 mt-4">पहले से खाता है? <span onclick="showPage('login')" class="text-amber-400 cursor-pointer font-bold hover:underline">लॉगिन करें</span></p>
+        </div>
+
+        <!-- ================= 4. DASHBOARD SECTION ================= -->
+        <div id="section-dashboard" class="page-section glass p-6 md:p-8 rounded-2xl space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 border-b border-gray-800 pb-4">
+                <div>
+                    <h2 class="text-xl font-bold tiranga-text">Member Dashboard</h2>
+                    <p class="text-xs text-gray-400" id="dash-user-email">Logged in user</p>
+                </div>
+                <button onclick="handleLogout()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-sm text-amber-400 mb-1">सक्रिय प्लान</h3>
+                    <p class="text-xs text-gray-300" id="dash-plan-info">Standard Digital ID</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-sm text-teal-400 mb-1">डिजिटल रिसोर्सेज</h3>
+                    <p class="text-xs text-gray-300">CV टूल्स और Prompts उपलब्ध</p>
+                </div>
+                <div class="bg-gray-900/60 p-4 rounded-xl border border-gray-800">
+                    <h3 class="font-bold text-sm text-orange-400 mb-1">रेफरल नेटवर्क</h3>
+                    <p class="text-xs text-gray-300">कमीशन और डाउनलाइन स्टेटस</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Firebase Configuration (यहाँ अपनी सही डिटेल्स डालें)
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const auth = firebase.auth();
+
+        // Single Page Section Switcher Logic
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.getElementById('section-' + pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Auth State Observer
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                document.getElementById('dash-user-email').innerText = "Logged in as: " + user.email;
+                document.getElementById('dash-plan-info').innerText = localStorage.getItem('iois_plan') ? "₹" + localStorage.getItem('iois_plan') + " Plan Active" : "Active Member";
+            }
+        });
+
+        // Login Handler
+        document.getElementById('single-login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            try {
+                await auth.signInWithEmailAndPassword(email, password);
+                alert('✅ लॉगिन सफल!');
+                showPage('dashboard');
+            } catch (error) {
+                alert('❌ लॉगिन असफल: ' + error.message);
+            }
+        });
+
+        // Register Handler
+        document.getElementById('single-register-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('reg-email').value;
+            const password = document.getElementById('reg-password').value;
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const plan = document.getElementById('reg-plan').value;
+            const upi = document.getElementById('reg-upi').value;
+
+            try {
+                await auth.createUserWithEmailAndPassword(email, password);
+                localStorage.setItem('iois_name', name);
+                localStorage.setItem('iois_phone', phone);
+                localStorage.setItem('iois_plan', plan);
+                localStorage.setItem('iois_upi', upi);
+
+                alert('🎉 रजिस्ट्रेशन सफल! आपका डेटा सुरक्षित है।');
+                showPage('dashboard');
+            } catch (error) {
+                alert('❌ रजिस्ट्रेशन असफल: ' + error.message);
+            }
+        });
+
+        // Logout Handler
+        function handleLogout() {
+            auth.signOut().then(() => {
+                alert('आप लॉग आउट हो चुके हैं।');
+                showPage('home');
+            });
+        }
+    </script>
+</body>
+</html>
