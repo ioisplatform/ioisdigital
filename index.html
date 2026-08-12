@@ -16,7 +16,9 @@
 @media(max-width:640px){.payment-steps{grid-template-columns:1fr 1fr}}
 
 .example-plan-group{margin:12px 0;background:rgba(15,23,42,.68);border:1px solid rgba(245,158,11,.15);border-radius:15px;overflow:hidden}.example-plan-group>summary{list-style:none;cursor:pointer;padding:15px 16px;font-size:13px;color:#fbbf24;display:flex;justify-content:space-between;gap:10px}.example-plan-group>summary::-webkit-details-marker{display:none}.example-plan-group>summary span{color:#94a3b8;font-size:10px;font-weight:700}.example-list{padding:0 12px 12px;display:grid;grid-template-columns:1fr 1fr;gap:9px}.example-list details{background:#080d1e;border:1px solid #1e293b;border-radius:11px;padding:10px}.example-list summary{cursor:pointer;color:#e2e8f0;font-size:11px;font-weight:800}.example-list p{font-size:10px!important;line-height:1.7;margin:8px 0 0;color:#94a3b8!important}@media(max-width:700px){.example-list{grid-template-columns:1fr}.example-plan-group>summary{flex-direction:column}}
-.stories-grid{display:grid;gap:11px;max-width:980px;margin:0 auto}.ref-story{background:linear-gradient(145deg,#0f172acc,#08101fcc);border:1px solid #334155;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px #0005}.ref-story[open]{border-color:#f59e0b66;box-shadow:0 18px 45px #0008}.ref-story summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:12px;color:#fff;font-weight:900;font-size:13px}.ref-story summary::-webkit-details-marker{display:none}.ref-story summary:after{content:"+";margin-left:auto;color:#fbbf24;font-size:20px;line-height:1}.ref-story[open] summary:after{content:"−"}.story-badge{display:inline-flex;align-items:center;justify-content:center;min-width:72px;padding:5px 8px;border-radius:999px;background:#f59e0b1a;border:1px solid #f59e0b55;color:#fbbf24;font-size:9px;letter-spacing:.7px}.story-body{padding:0 18px 18px;border-top:1px solid #1e293b}.story-body p{color:#cbd5e1;font-size:12px;line-height:1.85;margin:15px 0}.story-tip{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:#14b8a60d;border:1px solid #14b8a633;color:#99f6e4;font-size:11px;line-height:1.6}.story-tip i{color:#2dd4bf;margin-top:2px}.short-stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.short-story{background:#0f172acc;border:1px solid #334155;border-radius:14px;padding:15px;min-height:95px}.short-story span{font-size:9px;color:#2dd4bf;font-weight:900;letter-spacing:.7px}.short-story p{margin:8px 0 0;color:#dbeafe;font-size:11px;line-height:1.7}.learning-disclaimer{max-width:980px;margin-left:auto;margin-right:auto}@media(max-width:900px){.short-stories-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.short-stories-grid{grid-template-columns:1fr}.ref-story summary{font-size:12px}.story-body p{font-size:11px}}
+.stories-grid{display:grid;gap:11px;max-width:980px;margin:0 auto}.ref-story{background:linear-gradient(145deg,#0f172acc,#08101fcc);border:1px solid #334155;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px #0005}.ref-story[open]{border-color:#f59e0b66;box-shadow:0 18px 45px #0008}.ref-story summary{list-style:none;cursor:pointer;padding:16px 18px;display:flex;align-items:center;gap:12px;color:#fff;font-weight:900;font-size:13px}.ref-story summary::-webkit-details-marker{display:none}.ref-story summary:after{content:"+";margin-left:auto;color:#fbbf24;font-size:20px;line-height:1}.ref-story[open] summary:after{content:"−"}.story-badge{display:inline-flex;align-items:center;justify-content:center;min-width:72px;padding:5px 8px;border-radius:999px;background:#f59e0b1a;border:1px solid #f59e0b55;color:#fbbf24;font-size:9px;letter-spacing:.7px}.story-body{padding:0 18px 18px;border-top:1px solid #1e293b}.story-body p{color:#cbd5e1;font-size:12px;line-height:1.85;margin:15px 0}.story-tip{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:#14b8a60d;border:1px solid #14b8a633;color:#99f6e4;font-size:11px;line-height:1.6}.story-tip i{color:#2dd4bf;margin-top:2px}.short-stories-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.short-story{background:#0f172acc;border:1px solid #334155;border-radius:14px;padding:15px;min-height:95px}.short-story span{font-size:9px;color:#2dd4bf;font-weight:900;letter-spacing:.7px}.short-story p{margin:8px 0 0;color:#dbeafe;font-size:11px;line-height:1.7}.learning-disclaimer{max-width:980px;margin-left:auto;margin-right:auto}.telegram-settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.telegram-settings-grid label{display:block;margin-bottom:6px}.telegram-settings-grid .wide-input{width:100%}
+@media(max-width:640px){.telegram-settings-grid{grid-template-columns:1fr}}
+@media(max-width:900px){.short-stories-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:640px){.short-stories-grid{grid-template-columns:1fr}.ref-story summary{font-size:12px}.story-body p{font-size:11px}}
 </style></head>
 <body>
 
@@ -272,6 +274,16 @@
       <div class="auth-shell"><form id="forgot-password-form" class="premium-form"><label>Email</label><input id="fp-email" type="email" required><label>User ID</label><input id="fp-userid" required><label>New Password</label><input id="fp-new" type="password" minlength="6" required><label>Confirm Password</label><input id="fp-confirm" type="password" minlength="6" required><button class="btn-gradient full">Reset Password</button></form></div>
     </div>
 
+    <div id="view-change-password" class="spa-panel">
+      <div class="section-heading"><span>ACCOUNT SECURITY</span><h2>Change Password</h2><p>अपने current password से verify करके नया password सेट करें.</p></div>
+      <div class="auth-shell"><form id="change-password-form" class="premium-form">
+        <label>Current Password</label><input id="cp-old" type="password" minlength="6" required>
+        <label>New Password</label><input id="cp-new" type="password" minlength="6" required>
+        <label>Confirm New Password</label><input id="cp-confirm" type="password" minlength="6" required>
+        <button class="btn-gradient full" type="submit">Update Password</button>
+      </form></div>
+    </div>
+
     <div id="view-dashboard" class="spa-panel">
       <div id="dashboard-content"></div>
     </div>
@@ -398,8 +410,15 @@ function getUsers(){return JSON.parse(localStorage.getItem("iois_users")||"[]")}
 function setUsers(x){localStorage.setItem("iois_users",JSON.stringify(x))}
 function getIds(){return JSON.parse(localStorage.getItem("iois_used_ids")||"[]")}
 function setIds(x){localStorage.setItem("iois_used_ids",JSON.stringify(x))}
-function getCurrent(){return JSON.parse(localStorage.getItem("iois_current_user")||"null")}
-function setCurrent(u){localStorage.setItem("iois_current_user",JSON.stringify(u))}
+function getCurrent(){
+ try{
+  const c=JSON.parse(localStorage.getItem("iois_current_user")||"null");
+  if(!c?.userId)return null;
+  const fresh=getUsers().find(u=>u.userId===c.userId);
+  return fresh||null;
+ }catch{return null}
+}
+function setCurrent(u){ if(u) localStorage.setItem("iois_current_user",JSON.stringify({userId:u.userId})); else localStorage.removeItem("iois_current_user"); }
 function showToast(msg,type="info"){const t=$("toast");if(!t)return;t.textContent=msg;t.className="toast show "+type;clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.className="toast",3200)}
 function planById(id){return IOIS.plans.find(p=>p.id===id)||IOIS.plans[0]}
 
@@ -457,7 +476,7 @@ function showView(name){
  document.querySelectorAll(".spa-panel").forEach(x=>x.classList.remove("active"));
  const p=$("view-"+name);if(!p)return;
  $("spa-view").classList.add("active");p.classList.add("active");
- const labels={registration:"Registration",payment:"Payment",login:"Login",dashboard:"Dashboard","admin-lock":"Admin Access",admin:"Admin Dashboard",jobs:"Jobs",news:"News",panchang:"Panchang",chat:"Community Chat",services:"Services","forgot-id":"Forgot User ID","forgot-password":"Forgot Password",welcome:"Welcome"};
+ const labels={registration:"Registration",payment:"Payment",login:"Login",dashboard:"Dashboard","admin-lock":"Admin Access",admin:"Admin Dashboard",jobs:"Jobs",news:"News",panchang:"Panchang",chat:"Community Chat",services:"Services","forgot-id":"Forgot User ID","forgot-password":"Forgot Password",welcome:"Welcome","change-password":"Change Password"};
  $("spa-breadcrumb").textContent="IOIS · "+(labels[name]||name);
  window.scrollTo({top:0,behavior:"smooth"});
  if(name==="dashboard")renderDashboard();
@@ -503,7 +522,7 @@ function addTelegramQueue(type,user,extra={}){
  localStorage.setItem("iois_telegram_queue",JSON.stringify(q));
 }
 function registrationMessage(u){
- return `🔔 NEW IOIS REGISTRATION\nName: ${u.name}\nUser ID: ${u.userId}\nEmail: ${u.email}\nMobile: ${u.mobile}\nPlan: ${u.planName}\nAmount: ${money(u.amount)}\nReferral: ${u.referral||"—"}\nStatus: ${u.status}\nPayment: ${u.paymentScreenshot?"Screenshot attached":"Pending"}`;
+ return `🔔 NEW IOIS REGISTRATION\nName: ${u.name}\nUser ID: ${u.userId}\nEmail: ${u.email}\nMobile: ${u.mobile}\nPlan: ${u.planName}\nAmount: ${money(u.amount)}\nReferral: ${u.referral||"—"}\nStatus: ${u.status}\nPayment: ${u.paymentScreenshot?"Screenshot attached":"Pending"}\nPassword: [NOT SENT]`;
 }
 function saveUser(u){const users=getUsers();users.push(u);setUsers(users)}
 function currentPlan(){const u=getCurrent();return u?planById(u.planId):IOIS.plans[0]}
@@ -515,7 +534,7 @@ $("full-registration-form")?.addEventListener("submit",e=>{
  if(password!==confirm)return showToast("Password और Confirm Password match नहीं करते","error");
  if(getUsers().some(u=>u.email===email||u.mobile===mobile))return showToast("Email या mobile पहले से registered है","error");
  const u={userId:makeUserId(plan,name),name,email,mobile,password,planId:plan.id,planName:plan.name,planDisplay:plan.display,amount:plan.price,referral:$("r-ref").value.trim(),city:$("r-city").value.trim(),address:$("r-address").value.trim(),status:"PENDING",paymentScreenshot:"",rejectionReason:"",createdAt:new Date().toISOString(),approvedAt:"",deliveryUnlocked:false,referralCount:0,earnings:0,withdrawable:0};
- saveUser(u);setCurrent(u);addTelegramQueue("registration",u);localStorage.setItem("iois_last_registration",JSON.stringify(u));
+ saveUser(u);setCurrent(u);notifyTelegram("registration",u);localStorage.setItem("iois_last_registration",JSON.stringify(u));
  $("welcome-card").innerHTML=welcomeHTML(u);
  location.hash="welcome";showToast("Registration successful — User ID created","success");
 });
@@ -561,7 +580,7 @@ $('payment-form')?.addEventListener('submit',e=>{
   users[i].paymentSubmittedAt=new Date().toISOString();
   users[i].status='PENDING';
   users[i].rejectionReason='';
-  setUsers(users);setCurrent(users[i]);addTelegramQueue('payment_submitted',users[i]);
+  setUsers(users);setCurrent(users[i]);notifyTelegram('payment_submitted',users[i]);
   $('payment-status-box').textContent='🟠 Verification Pending';
   showToast('Payment screenshot submitted — Admin verification pending','success');
   setTimeout(()=>showView('dashboard'),650);
@@ -570,7 +589,7 @@ $('payment-form')?.addEventListener('submit',e=>{
 function renderDashboard(){
  const u=getCurrent();if(!u){location.hash="login";return}
  const p=planById(u.planId), approved=u.status==="APPROVED";
- $("dashboard-content").innerHTML=`<div class="dash-head"><div><span class="eyebrow">MEMBER DASHBOARD</span><h2>Welcome, ${esc(u.name)}</h2></div><div><button class="btn-outline" onclick="changePasswordPrompt()">Change Password</button> <button class="btn-primary" onclick="logout()">Logout</button></div></div>
+ $("dashboard-content").innerHTML=`<div class="dash-head"><div><span class="eyebrow">MEMBER DASHBOARD</span><h2>Welcome, ${esc(u.name)}</h2></div><div><button class="btn-outline" onclick="showView('change-password')">Change Password</button> <button class="btn-primary" onclick="logout()">Logout</button></div></div>
  <div class="dash-card-grid"><div class="dash-card"><small>USER ID</small><b>${esc(u.userId)}</b></div><div class="dash-card"><small>PLAN</small><b>${esc(u.planName)}</b></div><div class="dash-card"><small>STATUS</small><b class="${u.status.toLowerCase()}">${u.status}</b></div><div class="dash-card"><small>REFERRALS</small><b>${u.referralCount||0}</b></div></div>
  <div class="dash-main"><div class="profile-card"><div class="profile-row"><div class="profile-avatar">${esc((u.name||"U").slice(0,1).toUpperCase())}</div><div><h3>${esc(u.name)}</h3><p>${esc(u.email)} · +91 ${esc(u.mobile)}</p></div></div><hr style="border-color:#1e293b;margin:18px 0"><p><b>Membership:</b> ${esc(p.display)} — ${money(u.amount)}</p><p><b>Registration:</b> ${new Date(u.createdAt).toLocaleString("en-IN")}</p><p><b>Payment:</b> ${u.paymentScreenshot?"Screenshot submitted":"Not submitted"}</p>${u.rejectionReason?`<div class="notice compact"><h3>Rejection Reason</h3><p>${esc(u.rejectionReason)}</p><button class="btn-primary" onclick="openPayment('${esc(u.userId)}')">Upload Again</button></div>`:""}<div class="ref-box"><input readonly value="${location.origin+location.pathname}#registration?ref=${encodeURIComponent(u.userId)}"><button class="btn-primary" onclick="copyText(this.previousElementSibling.value)">Copy Referral</button></div></div>
  <div class="delivery-card"><h3>📥 Welcome & Delivery</h3>${approved?`<p>आपका ${esc(u.planName)} active है। आपके digital assets और tools अब उपलब्ध हैं.</p><div class="dashboard-actions"><button onclick="showDigitalId()">🪪 Digital ID</button><button onclick="showCertificate()">📜 Certificate</button><button onclick="showDownloads()">📥 Downloads</button><button onclick="showView('chat')">💬 Chat</button></div><div class="notice compact"><p>🔗 Premium Graphics & Poster Bundles</p><p>📄 Professional Resume/CV Templates</p><p>💼 Job & Freelancing Resource Guide</p><p>📞 Support: +91 ${IOIS.whatsapp}</p></div>`:`<p>🟡 आपका account अभी <b>pending</b> है। Payment screenshot submit करें और admin verification का इंतजार करें.</p><button class="btn-gradient full" onclick="openPayment('${esc(u.userId)}')">📤 Payment Screenshot</button>`}</div></div>`;
@@ -583,7 +602,7 @@ function showDownloads(){showToast("Approved member resources are listed in your
 function renderAdmin(){
  if(localStorage.getItem("iois_admin_session")!=="1"){location.hash="admin-lock";return}
  const users=getUsers(),pending=users.filter(u=>u.status==="PENDING").length,approved=users.filter(u=>u.status==="APPROVED").length,rejected=users.filter(u=>u.status==="REJECTED").length;
- $("admin-content").innerHTML=`<div class="admin-head"><div><span class="eyebrow">RESTRICTED • ADMIN</span><h2>IOIS Admin Dashboard</h2></div><button class="btn-outline" onclick="adminLogout()">Lock Admin</button></div><div class="admin-stats"><div class="admin-stat"><small>TOTAL MEMBERS</small><b>${users.length}</b></div><div class="admin-stat"><small>PENDING</small><b>${pending}</b></div><div class="admin-stat"><small>APPROVED</small><b>${approved}</b></div><div class="admin-stat"><small>REJECTED</small><b>${rejected}</b></div></div><div class="glass-card"><h3>Registrations & Payment Screenshots</h3><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>User ID</th><th>Name</th><th>Contact</th><th>Plan</th><th>Payment</th><th>Status</th><th>Action</th></tr></thead><tbody>${users.map(u=>`<tr><td>${esc(u.userId)}</td><td>${esc(u.name)}</td><td>${esc(u.email)}<br>+91 ${esc(u.mobile)}</td><td>${esc(u.planName)}<br>${money(u.amount)}</td><td>${u.paymentScreenshot?`<img src="${u.paymentScreenshot}" onclick="window.open(this.src,'_blank')">`:"—"}</td><td><span class="status-pill ${u.status.toLowerCase()}">${u.status}</span>${u.rejectionReason?`<br><small>${esc(u.rejectionReason)}</small>`:""}</td><td>${u.status==="PENDING"?`<button class="btn-primary" onclick="approveUser('${esc(u.userId)}')">Approve</button> <button class="btn-outline" onclick="rejectUser('${esc(u.userId)}')">Reject</button>`:"—"}</td></tr>`).join("")}</tbody></table></div></div><div class="notice compact"><h3>Telegram Notification Queue</h3><p>Frontend security के कारण bot token यहाँ embed नहीं किया गया है। Notifications queue में सुरक्षित event records रखे गए हैं.</p><button class="btn-primary" onclick="copyTelegramQueue()">Copy Latest Notification</button></div>`;
+ $("admin-content").innerHTML=`<div class="admin-head"><div><span class="eyebrow">RESTRICTED • ADMIN</span><h2>IOIS Admin Dashboard</h2></div><button class="btn-outline" onclick="adminLogout()">Lock Admin</button></div><div class="admin-stats"><div class="admin-stat"><small>TOTAL MEMBERS</small><b>${users.length}</b></div><div class="admin-stat"><small>PENDING</small><b>${pending}</b></div><div class="admin-stat"><small>APPROVED</small><b>${approved}</b></div><div class="admin-stat"><small>REJECTED</small><b>${rejected}</b></div></div><div class="glass-card"><h3>Registrations & Payment Screenshots</h3><div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>User ID</th><th>Name</th><th>Contact</th><th>Plan</th><th>Payment</th><th>Status</th><th>Action</th></tr></thead><tbody>${users.map(u=>`<tr><td>${esc(u.userId)}</td><td>${esc(u.name)}</td><td>${esc(u.email)}<br>+91 ${esc(u.mobile)}</td><td>${esc(u.planName)}<br>${money(u.amount)}</td><td>${u.paymentScreenshot?`<img src="${u.paymentScreenshot}" onclick="window.open(this.src,'_blank')">`:"—"}</td><td><span class="status-pill ${u.status.toLowerCase()}">${u.status}</span>${u.rejectionReason?`<br><small>${esc(u.rejectionReason)}</small>`:""}</td><td>${u.status==="PENDING"?`<button class="btn-primary" onclick="approveUser('${esc(u.userId)}')">Approve</button> <button class="btn-outline" onclick="rejectUser('${esc(u.userId)}')">Reject</button>`:"—"}</td></tr>`).join("")}</tbody></table></div></div><div class="notice compact"><h3>Telegram Bot Notifications</h3><p>Bot token और Chat ID केवल इस browser के LocalStorage में रखे जाते हैं। Password कभी Telegram पर नहीं भेजा जाएगा।</p><div class="telegram-settings-grid"><div><label>Bot Token</label><input id="tg-token" class="wide-input" type="password" placeholder="123456:ABC..." value="${esc(getTelegramConfig().token||"")}"></div><div><label>Admin Chat ID / Username</label><input id="tg-chat" class="wide-input" placeholder="123456789 या @channelusername" value="${esc(getTelegramConfig().chatId||"")}"></div></div><div class="dashboard-actions" style="margin-top:10px"><button class="btn-primary" onclick="saveTelegramConfig()">Save Telegram Setup</button><button class="btn-outline" onclick="testTelegram()">Send Test Message</button><button class="btn-outline" onclick="copyTelegramQueue()">Copy Latest Notification</button></div><p id="tg-status" class="small muted"></p></div>`;
 }
 function approveUser(id){const users=getUsers(),i=users.findIndex(u=>u.userId===id);if(i<0)return;users[i].status="APPROVED";users[i].approvedAt=new Date().toISOString();users[i].deliveryUnlocked=true;setUsers(users);addTelegramQueue("approved",users[i]);renderAdmin();showToast("Member approved","success")}
 function rejectUser(id){const reason=prompt("Rejection reason");if(!reason)return;const users=getUsers(),i=users.findIndex(u=>u.userId===id);if(i<0)return;users[i].status="REJECTED";users[i].rejectionReason=reason;users[i].deliveryUnlocked=false;setUsers(users);addTelegramQueue("rejected",users[i],{reason});renderAdmin();showToast("Member rejected","success")}
@@ -597,6 +616,102 @@ function renderPanchang(){updateClock();const z=["♈ मेष","♉ वृष�
 function renderChat(){const msgs=JSON.parse(localStorage.getItem("iois_chat")||"[]");$("chat-messages").innerHTML=msgs.map(m=>`<div class="chat-msg ${m.me?"me":""}"><b>${esc(m.name)}</b><br>${esc(m.text)}<br><small>${new Date(m.at).toLocaleTimeString("hi-IN",{hour:"2-digit",minute:"2-digit"})}</small></div>`).join("")||`<div class="chat-msg">👋 IOIS Community में आपका स्वागत है.</div>`}
 $("chat-form")?.addEventListener("submit",e=>{e.preventDefault();const u=getCurrent();if(!u)return showToast("Chat के लिए login करें","error");const msgs=JSON.parse(localStorage.getItem("iois_chat")||"[]");msgs.push({name:u.name,text:$("chat-input").value,at:new Date().toISOString(),me:true});localStorage.setItem("iois_chat",JSON.stringify(msgs));$("chat-input").value="";renderChat()})
 document.querySelectorAll('.site-header a').forEach(a=>a.addEventListener('click',()=>setTimeout(()=>{if($("mobile-menu"))$("mobile-menu").classList.remove("open")},20)));
+
+/* ===== IOIS RELIABLE AUTH + TELEGRAM LAYER ===== */
+function getTelegramConfig(){try{return JSON.parse(localStorage.getItem("iois_telegram_config")||"{}")}catch{return {}}}
+function saveTelegramConfig(){
+ const token=$('tg-token')?.value.trim()||'', chatId=$('tg-chat')?.value.trim()||'';
+ if(!token||!chatId){showToast('Bot Token और Chat ID दोनों भरें','error');return}
+ localStorage.setItem('iois_telegram_config',JSON.stringify({token,chatId}));
+ if($('tg-status'))$('tg-status').textContent='Telegram setup saved on this browser.';
+ showToast('Telegram setup saved','success');
+}
+async function telegramRequest(method,body){
+ const cfg=getTelegramConfig();
+ if(!cfg.token||!cfg.chatId) throw new Error('Telegram bot setup missing');
+ const res=await fetch(`https://api.telegram.org/bot${encodeURIComponent(cfg.token)}/${method}`,{method:'POST',body});
+ const data=await res.json().catch(()=>({ok:false,description:'Invalid response'}));
+ if(!res.ok||!data.ok) throw new Error(data.description||`Telegram ${method} failed`);
+ return data;
+}
+function buildRegistrationTelegram(u){
+ return `🔔 NEW IOIS REGISTRATION\n\n👤 Name: ${u.name}\n🆔 User ID: ${u.userId}\n📧 Email: ${u.email}\n📱 Mobile: ${u.mobile}\n📦 Plan: ${u.planName}\n💰 Amount: ${money(u.amount)}\n🔗 Referral: ${u.referral||'—'}\n🏠 City: ${u.city||'—'}\n📍 Address: ${u.address||'—'}\n📅 Registered: ${new Date(u.createdAt).toLocaleString('en-IN')}\n🟡 Status: ${u.status}\n🔐 Password: [NOT SENT FOR SECURITY]`;
+}
+async function sendTelegramText(text){
+ const cfg=getTelegramConfig();
+ if(!cfg.token||!cfg.chatId) return {queued:true,reason:'not-configured'};
+ const fd=new FormData();fd.append('chat_id',cfg.chatId);fd.append('text',text);fd.append('protect_content','true');
+ return telegramRequest('sendMessage',fd);
+}
+async function sendTelegramPhoto(dataUrl,caption){
+ const cfg=getTelegramConfig();
+ if(!cfg.token||!cfg.chatId||!dataUrl) return {queued:true,reason:'not-configured'};
+ const m=dataUrl.match(/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.+)$/); if(!m) throw new Error('Invalid image data');
+ const bytes=Uint8Array.from(atob(m[2]),c=>c.charCodeAt(0));
+ const blob=new Blob([bytes],{type:m[1]});
+ const fd=new FormData();fd.append('chat_id',cfg.chatId);fd.append('photo',blob,'payment-screenshot.jpg');fd.append('caption',caption);fd.append('protect_content','true');
+ return telegramRequest('sendPhoto',fd);
+}
+async function notifyTelegram(type,u,extra={}){
+ addTelegramQueue(type,u,extra);
+ try{
+   let text=buildRegistrationTelegram(u);
+   if(type==='payment_submitted') text=`💳 IOIS PAYMENT SCREENSHOT SUBMITTED\n\n${buildRegistrationTelegram(u)}\n\n📸 Payment screenshot attached below.`;
+   if(type==='approved') text=`✅ IOIS REGISTRATION APPROVED\n\n${buildRegistrationTelegram(u)}\n\n🎉 Account is now APPROVED.`;
+   if(type==='rejected') text=`❌ IOIS REGISTRATION REJECTED\n\n${buildRegistrationTelegram(u)}\n\n📝 Reason: ${extra.reason||u.rejectionReason||'Not specified'}`;
+   if(type==='password_changed') text=`🔐 IOIS PASSWORD CHANGED\n\nUser ID: ${u.userId}\nName: ${u.name}\nEmail: ${u.email}\n\nPassword value is not included.`;
+   const r=await sendTelegramText(text);
+   if(type==='payment_submitted' && u.paymentScreenshot){try{await sendTelegramPhoto(u.paymentScreenshot,`📸 Payment screenshot\nUser ID: ${u.userId}\nPlan: ${u.planName}\nAmount: ${money(u.amount)}`)}catch(e){console.warn('Telegram photo failed',e)}}
+   return r;
+ }catch(err){
+   console.warn('Telegram notification failed:',err);
+   const q=JSON.parse(localStorage.getItem('iois_telegram_queue')||'[]');if(q.length)q[q.length-1].sendError=err.message;localStorage.setItem('iois_telegram_queue',JSON.stringify(q));
+   return {queued:true,reason:err.message};
+ }
+}
+async function testTelegram(){
+ const status=$('tg-status');if(status)status.textContent='Sending test...';
+ try{await sendTelegramText('✅ IOIS Telegram test successful. Admin notifications are connected.');if(status)status.textContent='✅ Telegram test message sent successfully.';showToast('Telegram test sent','success')}
+ catch(e){if(status)status.textContent='❌ Telegram test failed: '+e.message;showToast(e.message,'error')}
+}
+function authenticate(identity,password){
+ const id=identity.trim().toLowerCase();
+ return getUsers().find(u=>(String(u.email).toLowerCase()===id||String(u.userId).toLowerCase()===id)&&u.password===password)||null;
+}
+$('login-form')?.addEventListener('submit',e=>{
+ e.preventDefault();const u=authenticate($('l-identity').value,$('l-password').value);
+ if(!u){showToast('Email/User ID या password गलत है','error');return}
+ setCurrent(u);showToast('Login successful','success');location.hash='dashboard';
+});
+$('forgot-id-form')?.addEventListener('submit',e=>{
+ e.preventDefault();const email=$('fid-email').value.trim().toLowerCase(),mobile=$('fid-mobile').value.replace(/\D/g,'');const u=getUsers().find(x=>String(x.email).toLowerCase()===email&&x.mobile===mobile);
+ $('fid-result').innerHTML=u?`<div class="notice compact success">✅ आपका User ID है: <b>${esc(u.userId)}</b><br><button class="btn-primary" style="margin-top:10px" type="button" onclick="copyText('${esc(u.userId)}')">📋 Copy User ID</button></div>`:`<div class="notice compact error">Email और mobile match नहीं हुआ.</div>`;
+});
+$('forgot-password-form')?.addEventListener('submit',e=>{
+ e.preventDefault();const email=$('fp-email').value.trim().toLowerCase(),uid=$('fp-userid').value.trim().toUpperCase(),n=$('fp-new').value,c=$('fp-confirm').value;
+ if(n.length<6)return showToast('New password कम से कम 6 characters का रखें','error');if(n!==c)return showToast('New password और confirm password match नहीं करते','error');
+ const users=getUsers(),i=users.findIndex(u=>String(u.email).toLowerCase()===email&&String(u.userId).toUpperCase()===uid);if(i<0)return showToast('Email और User ID match नहीं हुए','error');
+ users[i].password=n;users[i].passwordChangedAt=new Date().toISOString();setUsers(users);setCurrent(users[i]);notifyTelegram('password_changed',users[i]);showToast('Password reset successfully','success');setTimeout(()=>location.hash='dashboard',400);
+});
+$('change-password-form')?.addEventListener('submit',e=>{
+ e.preventDefault();const u=getCurrent();if(!u){location.hash='login';return}const old=$('cp-old').value,n=$('cp-new').value,c=$('cp-confirm').value;
+ if(old!==u.password)return showToast('Current password गलत है','error');if(n.length<6)return showToast('New password कम से कम 6 characters का रखें','error');if(n!==c)return showToast('Passwords match नहीं करते','error');
+ const users=getUsers(),i=users.findIndex(x=>x.userId===u.userId);if(i<0)return showToast('User record नहीं मिला','error');users[i].password=n;users[i].passwordChangedAt=new Date().toISOString();setUsers(users);setCurrent(users[i]);notifyTelegram('password_changed',users[i]);e.target.reset();showToast('Password changed successfully','success');setTimeout(()=>location.hash='dashboard',400);
+});
+/* Replace prompt-based password change with the full secure view. */
+function changePasswordPrompt(){showView('change-password')}
+/* Send real Telegram notifications as well as preserving local queue. */
+const _oldAddTelegramQueue = addTelegramQueue;
+/* Re-wire registration/payment/admin actions to send immediately. */
+function sendRegistrationNotification(u){return notifyTelegram('registration',u)}
+/* Keep session fresh whenever dashboard or protected view is rendered. */
+const _oldLogout = logout;
+function logout(){localStorage.removeItem('iois_current_user');location.hash='home';showToast('Logged out','success')}
+const _oldApproveUser = approveUser;
+async function approveUser(id){const users=getUsers(),i=users.findIndex(u=>u.userId===id);if(i<0)return;users[i].status='APPROVED';users[i].approvedAt=new Date().toISOString();users[i].deliveryUnlocked=true;setUsers(users);await notifyTelegram('approved',users[i]);renderAdmin();showToast('Member approved','success')}
+const _oldRejectUser = rejectUser;
+async function rejectUser(id){const reason=prompt('Rejection reason');if(!reason)return;const users=getUsers(),i=users.findIndex(u=>u.userId===id);if(i<0)return;users[i].status='REJECTED';users[i].rejectionReason=reason;users[i].deliveryUnlocked=false;setUsers(users);await notifyTelegram('rejected',users[i],{reason});renderAdmin();showToast('Member rejected','success')}
+
 window.addEventListener("hashchange",route);
 document.addEventListener("DOMContentLoaded",()=>{renderPlans();renderExamples();updateClock();loadWeather();setInterval(updateClock,1000);route();});
 </script>
